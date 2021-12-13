@@ -1,0 +1,63 @@
+@import url(sanitize.css);
+
+/*p {
+    margin: 0px 0px 10px 10px;
+}*/
+body{
+    background-color: #bebebe;/*塗りつぶし*/
+}
+
+h2 {
+    font-size: 24px;
+    margin:0px 0px 0px 10px;
+}
+
+.content {
+    background-color: pink;
+    background-color: rgb(50%, 50%, 0%);
+    background-color: rgb(139, 23, 43);
+    background-color: #ff0033;
+    background-color: #f03;
+    background-color: rgba(0, 0, 0, .5);/*不透明度 50％の黒*/
+    background-color: hsl(120, 100%, 50%);
+
+    background-color: #fff;
+    width:600px;
+    border: 1px solid #d1d1d1;/*【枠線】幅　種類　色*/
+    border: 1px solid black;
+    border-top: 10px solid red;
+    padding: 30px 30px 10px;/*枠内の余白*/
+    margin: 10px auto;/*【枠外の余白】上下：10px　左右：Auto*/
+}
+
+button {
+    width:100%;
+    background-color: #0775b4d3;
+    color: #fff;/*文字色*/
+    padding: 15px;
+    border-radius: 10px;/*ボタン角を丸める*/
+    box-shadow: 0 0 8px rgb(0,0,0,.4);/*【ドロップシャドウ】X位置 Y位置 ぼかし 色(半透明)*/
+}
+
+.ctrl {
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;/*インラインからブロックに変更*/
+    /* border-bottom: 1px solid #d1d1d1; */
+    font-size: 1.2em;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+
+.required{
+    margin-left: 0.3em;/*左の余白0.3em*/
+    color: red;
+    font-size: 0.9em;
+    padding: 3px;
+    background-color: #fee;
+    font-weight: bold;
+}
