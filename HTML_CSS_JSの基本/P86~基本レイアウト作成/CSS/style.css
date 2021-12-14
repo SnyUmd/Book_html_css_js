@@ -1,0 +1,66 @@
+@import url(sanitize.css);
+
+body{
+    background-color: #f0f0f0;/*背景色*/
+    padding: 10px;/*要素内の余白*/
+    font-size: 14px;/*文字サイズ*/
+    color: #666;/*文字色*/
+}
+
+
+
+.inf h1{
+    font-size: 18px;
+    margin: 0 10px 10px 0;
+    float: left;
+}
+
+.inf .type{
+    display: inline;
+    background-color: #E35A4D;
+    padding: 3px 5px;
+    font-size: 80%;
+    color: #FFF;
+}
+
+
+
+.inf_text img{
+    float: left;
+    margin: 0 10px 10px 0px;
+}
+
+.inf_text{
+    /* border: 1px solid black; */
+    padding: 5px;
+    margin: 0 0 0 10px;
+    clear: left;
+}
+
+.container{
+    width: auto;/*幅*/
+    margin: 10px auto;/*余白*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);/*影付け*/
+}
+
+header{
+    background-color: #422814;
+    padding: 10px;
+    color: #fff;
+}
+
+header h1{
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.list_item{
+    clear: left;
+    /* border: 1px solid black; */
+}
+
+.content{
+
+}
