@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="sanitize.css">
+        <title></title>
+        <script src="I2C_PullUp.js"></script>
+        <link rel="stylesheet" href="I2C_PullUp.css">
+    </head>
+
+        <!-- ***************************************************************** -->
+
+    <body>
+        <div class="container">
+            <div class="title-txt">
+                <h2><a href="../index.html">Calculation collection</a></h2>
+            </div>
+
+            <div class="sub_title-txt">
+                <h3>LED電流</h3>
+            </div>
+
+            <div class="dImg">
+                <!-- <img src="orm.Png" alt="計算イメージ"> -->
+            </div>
+
+            <div class="value">
+                <section class="S1">
+                    <p class="Item1-1">
+                        <label>　　　　 　Vdd電圧 : </label>
+                        <input type="number" name="vdd_voltage11" id="txb_vdd_voltage11" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+
+                    <p class="Item1-2">
+                        <label> 　　　　　　on電圧 : </label>
+                        <input type="number" name="on_voltage12" id="txb_on_voltage12" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+
+                    <p class="Item1-3">
+                        <label>ドライバシンク電流 : </label>
+                        <input type="number" name="Driver_sync_current13" id="txb_Driver_sync_current13" class="txbNum">
+                        <label>[A]</label>
+                    </p>
+
+                    <p class="pRsltRes1">
+                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
+                        <label> 最小プルアップ電流 : </label>
+                        <input type="text" name="Rst1" id="rslRes1" class="rst">
+                        <label>[A]</label>
+                    </p>
+
+                </section>
+            </div>
+
+            <div class="btnAll">
+                <button name="Btn-S3"
+                        value="計算"
+                        id="btnCal3"
+                        onclick="Calc('txb_vdd_voltage11', 'txb_on_voltage12', 'txb_Driver_sync_current13', 'rslRes1');">
+                        計算
+                </button>
+            </div>
+
+            <p class="pDebug">
+                <label for="" id="debug" class="debugCls" >debug</label>
+            </p>
+        </div>
+    </body>
+
+
+</html>
