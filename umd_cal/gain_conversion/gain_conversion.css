@@ -1,0 +1,128 @@
+body{
+    background-color: rgb(195, 199, 206);
+    margin: 0 0;
+    padding: 10px;
+    /* width: 500px; */
+}
+
+
+.dImg{
+    margin: 10px auto;
+    text-align: center;
+    width: 50%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* float: left; */
+    /* align-items: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+
+.title-txt{
+    font-size: 20px;
+    padding: 1px;
+    text-align: center;
+    background-color: rgb(6, 13, 48);
+    color: white;
+    clear: left;
+}
+
+
+.title-txt a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.sub_title-txt{
+    font-size: 14px;
+    padding: 1px;
+    text-align: center;
+    background-color: rgb(36, 136, 202);
+    color: white;
+}
+
+
+
+.txbNum{
+    text-align: right;
+    background-color: rgb(241, 241, 166);
+    width: 100px;
+}
+
+
+.txbNum::-webkit-inner-spin-button,
+.txbNum::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance:textfield;
+}
+
+
+.S1{
+    float: left;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    margin: 0 5px;
+}
+.S2{
+    float: left;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    margin: 0 5px;
+}
+.S3{
+    float: left;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    margin: 0 5px;
+}
+
+/* .btn1{
+    text-align: center;
+}
+.btn1 .Btn-S1{
+    width: 200px;
+} */
+
+
+.btnAll{
+    text-align: center;
+    margin: 5px;
+    width: 50%;
+    margin: 10px auto;
+}
+
+
+.btnAll button{
+    width: 400px;
+}
+
+.container{
+    width: auto;/*幅*/
+    margin: 10px auto;/*余白*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);/*影付け*/
+    padding: 10px;
+
+}
+
+
+.value{
+    margin: 0 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.rst{
+    pointer-events : none;
+    background-color: rgb(210, 195, 228);
+    text-align: right;
+    width: 100px;
+}
+
+
+.pDebug{
+    clear: left;
+}

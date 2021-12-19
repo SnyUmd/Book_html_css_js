@@ -1,3 +1,4 @@
+
 function Calc(typ, id0, id1, id2, rsl_id){
     result = 0;
     a = parseFloat(document.getElementById(id0).value);

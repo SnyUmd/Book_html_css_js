@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(195, 199, 206);
+    margin: 0 0;
+    padding: 10px;
+}
+.content{
+    background-color: white;
+    /* padding: 10px; */
+    margin: 0 0 10px 0;
+    clear: left;
+}
+.title-txt{
+    font-size: 20px;
+    padding: 1px;
+    text-align: center;
+    background-color: rgb(6, 13, 48);
+    color: white;
+}
+.title-txt a{
+    text-decoration: none;
+    color: white;
+}
+.ItemList0{
+    width: 25%;
+    float: left;
+    background-color: white;
+    text-align: center;
+    border: 1px solid gray;
+}
+.ItemList0 ol{
+    /* list-style: none; */
+    background-color: white;
+    margin: 0 15px 0 0;
+}
+.ItemList0 li{
+    border: 1px solid gray;
+    background-color: white;
+    margin: 10px;
+}
+.NameSection{
+    border: 0.5px solid black;
+    margin: 10px 15px;
+}
+.clearfix:after{
+    content:" ";
+    display:table;
+    clear:both;
+}
