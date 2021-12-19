@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="sanitize.css">
+        <title></title>
+        <script src="LED_Curr.js"></script>
+        <link rel="stylesheet" href="LED_Curr.css">
+    </head>
+
+        <!-- ***************************************************************** -->
+
+    <body>
+        <div class="container">
+            <div class="title-txt">
+                <h2><a href="../index.html">Calculation collection</a></h2>
+            </div>
+
+            <div class="sub_title-txt">
+                <h3>LED電流</h3>
+            </div>
+
+            <div class="dImg">
+                <!-- <img src="orm.Png" alt="計算イメージ"> -->
+            </div>
+
+            <div class="value">
+                <section class="S1">
+                    <p class="Item1-1">
+                        <label>　　印可電圧 : </label>
+                        <input type="number" name="AppVoltage11" id="txbAppVoltaget11" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+
+                    <p class="Item1-2">
+                        <label> 　　LED電圧 : </label>
+                        <input type="number" name="LED_Voltage12" id="txbLED_Voltage12" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+
+                    <p class="Item1-3">
+                        <label> 目的LED電流 : </label>
+                        <input type="number" name="TargetCurr13" id="txbTargetCurr13" class="txbNum">
+                        <label>[A]</label>
+                    </p>
+
+                    <p class="pRsltRes1">
+                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
+                        <label> 電流制限抵抗 : </label>
+                        <input type="text" name="Rst1" id="rslRes1" class="rst">
+                        <label>[Ω]</label>
+                    </p>
+
+                </section>
+
+                <section class="S2">
+                    <p class="Item2-1">
+                        <label> 　　印可電圧 : </label>
+                        <input type="number" name="AppVoltage21" id="txbAppVoltage21" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+                    <p class="Item2-2">
+                        <label>　　LED電圧 : </label>
+                        <input type="number" name="LED_Voltage22" id="txbLED_Voltage22" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+                    <p class="Item2-3">
+                        <label>電流制限抵抗 : </label>
+                        <input type="number" name="Res23" id="txbRes23" class="txbNum">
+                        <label>[Ω]</label>
+                    </p>
+
+                    <p class="pRsltCurr2">
+                        <label>　　LED電流 : </label>
+                        <input type="text" name="Rst2" id="rstCurr2" class="rst">
+                        <label>[A]</label>
+                    </p>
+                </section>
+
+                <section class="S3">
+                    <p class="Item3-1">
+                        <label>　　LED電流 : </label>
+                        <input type="number" name="Curr31" id="txbCurr31" class="txbNum">
+                        <label>[A]</label>
+                    </p>
+                    <p class="Item3-2">
+                        <label>　　LED電圧 : </label>
+                        <input type="number" name="LED_Voltage32" id="txbVoltage32" class="txbNum">
+                        <label>[V]</label>
+                    </p>
+                    <p class="Item3-3">
+                        <label>電流制限抵抗 : </label>
+                        <input type="number" name="Res33" id="txbRes33" class="txbNum">
+                        <label>[Ω]</label>
+                    </p>
+
+                    <p class="pRsltVoltage">
+                        <label>　　印可電圧 : </label>
+                        <input type="text" name="Rst3" id="rslVoltage3" class="rst">
+                        <label>[V]</label>
+                    </p>
+
+                </section>
+            </div>
+
+            <div class="btnAll">
+                <button name="Btn-S3"
+                        value="計算"
+                        id="btnCal3"
+                        onclick="Calc(1, 'txbAppVoltaget11', 'txbLED_Voltage12', 'txbTargetCurr13', 'rslRes1');
+                                 Calc(2, 'txbAppVoltage21', 'txbLED_Voltage22', 'txbRes23', 'rstCurr2');
+                                 Calc(3, 'txbCurr31', 'txbVoltage32', 'txbRes33', 'rslVoltage3');">計算
+                </button>
+            </div>
+
+            <p class="pDebug">
+                <label for="" id="debug" class="debugCls" >debug</label>
+            </p>
+        </div>
+    </body>
+
+
+</html>

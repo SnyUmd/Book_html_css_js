@@ -114,7 +114,7 @@
                 margin: 10px auto;/*余白*/
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);/*影付け*/
                 padding: 10px;
-                
+
             }
 
 
@@ -132,7 +132,7 @@
                 width: 100px;
             }
 
-            
+
             .pDebug{
                 clear: left;
             }
@@ -156,7 +156,7 @@
             <div class="dImg">
                 <img src="orm.Png" alt="計算イメージ">
             </div>
-            
+
             <div class="value">
                 <section class="S1">
                     <p class="Item1-1">
@@ -172,9 +172,9 @@
                     </p>
 
                     <!-- <p class="btn1">
-                        <button class="Btn-S1" 
-                            value="計算" 
-                            id="btnCal1" 
+                        <button class="Btn-S1"
+                            value="計算"
+                            id="btnCal1"
                             onclick="OrmCalc(1, 'txbVolt11', 'txbRes12', 'rslCur');
                                     WattCalc(1,'txbVolt11', 'txbRes12', 'rslWatt1');">計算
                         </button>
@@ -194,13 +194,13 @@
                     </p>
                 </section>
 
-                
+
                 <section class="S2">
                     <p class="Item2-1">
                         <label for="txbVolt21"> 電圧 : </label>
                         <input type="number" name="Volt" id="txbVolt21" class="txbNum">
                         <label for="Res">[V]</label>
-                        
+
                     </p>
                     <p class="Item2-2">
                         <label for="txbCurrent22">電流 : </label>
@@ -217,8 +217,8 @@
                         <label> 電力 : </label>
                         <input type="text" name="Rst2" id="rslWatt2" class="rst">
                         <label>[W]</label>
-                        <!-- <button name="Btn-S2" 
-                                value="計算" 
+                        <!-- <button name="Btn-S2"
+                                value="計算"
                                 id="btnCal2"
                                 onclick="OrmCalc(2, 'txbVolt21', 'txbCurrent22', 'rslRes');
                                          WattCalc(2,'txbVolt21', 'txbCurrent22', 'rslWatt2');">計算
@@ -233,7 +233,7 @@
                         <label for="txbRes31"> 抵抗 : </label>
                         <input type="number" name="Res" id="txbRes31" class="txbNum">
                         <label for="Res">[Ω]</label>
-                        
+
                     </p>
                     <p class="Item3-2">
                         <label for="txbCurrent32">電流 : </label>
@@ -250,9 +250,9 @@
                         <label> 電力 : </label>
                         <input type="text" name="Rst1" id="rslWatt3" class="rst">
                         <label>[W]</label>
-                        <!-- <button name="Btn-S3" 
-                                value="計算" 
-                                id="btnCal3" 
+                        <!-- <button name="Btn-S3"
+                                value="計算"
+                                id="btnCal3"
                                 onclick="OrmCalc(3, 'txbRes31', 'txbCurrent32', 'rslVolt');
                                          WattCalc(3,'txbRes31', 'txbCurrent32', 'rslWatt3');">計算
                         </button> -->
@@ -260,9 +260,9 @@
                 </section>
             </div>
             <div class="btnAll">
-                <button name="Btn-S3" 
-                        value="計算" 
-                        id="btnCal3" 
+                <button name="Btn-S3"
+                        value="計算"
+                        id="btnCal3"
                         onclick="OrmCalc(1, 'txbVolt11', 'txbRes12', 'rslCur');
                                  OrmCalc(2, 'txbVolt21', 'txbCurrent22', 'rslRes');
                                  OrmCalc(3, 'txbRes31', 'txbCurrent32', 'rslVolt');
@@ -276,7 +276,7 @@
                 <label for="" id="debug" class="debugCls" >debug</label>
             </p>
         </div>
-        
+
         <!-- ***************************************************************** -->
         <script>
             // function AllCalc(){
@@ -303,7 +303,7 @@
                 }
                 //alert(result);
                 document.getElementById(rsl_id).value = result;
-            } 
+            }
 
             function WattCalc(typ, id0, id1, rsl_id){
                 result = 0;
@@ -322,10 +322,10 @@
                 }
                 //alert(result);
                 document.getElementById(rsl_id).value = result;
-            } 
+            }
 
         </script>
     </body>
 
-    
+
 </html>

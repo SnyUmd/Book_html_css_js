@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="sanitize.css">
+        <title></title>
+        <script src="orm.js"></script>
+        <link rel="stylesheet" href="orm.css">
+    </head>
+
+        <!-- ***************************************************************** -->
+
+    <body>
+        <div class="container">
+            <div class="title-txt">
+                <h2><a href="../index.html">Calculation collection</a></h2>
+            </div>
+
+            <div class="sub_title-txt">
+                <h3>オーム+電力</h3>
+            </div>
+
+            <div class="dImg">
+                <img src="orm.Png" alt="計算イメージ">
+            </div>
+
+            <div class="value">
+                <section class="S1">
+                    <p class="Item1-1">
+                        <label for="txbVolt11">電圧 : </label>
+                        <input type="number" name="Volt" id="txbVolt11" class="txbNum">
+                        <label for="Res">[V]</label>
+                    </p>
+
+                    <p class="Item1-2">
+                        <label for="txbRes12"> 抵抗 : </label>
+                        <input type="number" name="Res" id="txbRes12" class="txbNum">
+                        <label for="Res">[Ω]</label>
+                    </p>
+
+                    <p class="pRsltOrm">
+                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
+                        <label> 電流 : </label>
+                        <input type="text" name="Rst1" id="rslCur" class="rst">
+                        <label>[A]</label>
+                    </p>
+                    <p class="pRsltPwr">
+                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
+                        <label> 電力 : </label>
+                        <input type="text" name="Rst1" id="rslWatt1" class="rst">
+                        <label>[W]</label>
+                    </p>
+                </section>
+
+                <section class="S2">
+                    <p class="Item2-1">
+                        <label for="txbVolt21"> 電圧 : </label>
+                        <input type="number" name="Volt" id="txbVolt21" class="txbNum">
+                        <label for="Res">[V]</label>
+
+                    </p>
+                    <p class="Item2-2">
+                        <label for="txbCurrent22">電流 : </label>
+                        <input type="number" name="current" id="txbCurrent22" class="txbNum">
+                        <label for="Res">[A]</label>
+                    </p>
+                    <p class="pRsltOrm">
+                        <label> 抵抗 : </label>
+                        <input type="text" name="Rst2" id="rslRes" class="rst">
+                        <label>[Ω]</label>
+                    </p>
+                    <p class="pRsltPwr">
+                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
+                        <label> 電力 : </label>
+                        <input type="text" name="Rst2" id="rslWatt2" class="rst">
+                        <label>[W]</label>
+                    </p>
+                </section>
+
+                <section class="S3">
+                    <p class="Item3-1">
+                        <label for="txbRes31"> 抵抗 : </label>
+                        <input type="number" name="Res" id="txbRes31" class="txbNum">
+                        <label for="Res">[Ω]</label>
+
+                    </p>
+                    <p class="Item3-2">
+                        <label for="txbCurrent32">電流 : </label>
+                        <input type="number" name="current" id="txbCurrent32" class="txbNum">
+                        <label for="Cur">[A]</label>
+                    </p>
+                    <p class="pRsltOrm">
+                        <label> 電圧 : </label>
+                        <input type="text" name="Rst3" id="rslVolt" class="rst">
+                        <label>[V]</label>
+                    </p>
+                    <p class="pRsltPwr">
+                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
+                        <label> 電力 : </label>
+                        <input type="text" name="Rst1" id="rslWatt3" class="rst">
+                        <label>[W]</label>
+
+                    </p>
+                </section>
+            </div>
+
+            <div class="btnAll">
+                <button name="Btn-S3"
+                        value="計算"
+                        id="btnCal3"
+                        onclick="OrmCalc(1, 'txbVolt11', 'txbRes12', 'rslCur');
+                                 OrmCalc(2, 'txbVolt21', 'txbCurrent22', 'rslRes');
+                                 OrmCalc(3, 'txbRes31', 'txbCurrent32', 'rslVolt');
+                                 WattCalc(1,'txbVolt11', 'txbRes12', 'rslWatt1');
+                                 WattCalc(2,'txbVolt21', 'txbCurrent22', 'rslWatt2');
+                                 WattCalc(3,'txbRes31', 'txbCurrent32', 'rslWatt3');">計算
+                </button>
+            </div>
+
+            <p class="pDebug">
+                <label for="" id="debug" class="debugCls" >debug</label>
+            </p>
+        </div>
+    </body>
+
+
+</html>
