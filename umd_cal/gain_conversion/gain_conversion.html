@@ -18,41 +18,84 @@
             </div>
 
             <div class="sub_title-txt">
-                <h3>オーム+電力</h3>
+                <h3>利得換算</h3>
             </div>
 
             <div class="dImg">
                 <img src="orm.Png" alt="計算イメージ">
             </div>
 
-            <div class="value">
+            <div class="Line1">
+
+
                 <section class="S1">
+                    <p>電圧利得 ⇒ 倍率(dBV)</p>
+                    <p>　dBV = 20log(A)</p>
                     <p class="Item1-1">
-                        <label for="txbVolt11">電圧 : </label>
-                        <input type="number" name="Volt" id="txbVolt11" class="txbNum">
-                        <label for="Res">[V]</label>
+                        <label>　　倍率 : </label>
+                        <input type="number" name="Magnification11" id="txbMagnification11" class="txbNum">
+                        <label>[倍]</label>
                     </p>
-
-                    <p class="Item1-2">
-                        <label for="txbRes12"> 抵抗 : </label>
-                        <input type="number" name="Res" id="txbRes12" class="txbNum">
-                        <label for="Res">[Ω]</label>
-                    </p>
-
-                    <p class="pRsltOrm">
-                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
-                        <label> 電流 : </label>
-                        <input type="text" name="Rst1" id="rslCur" class="rst">
-                        <label>[A]</label>
-                    </p>
-                    <p class="pRsltPwr">
-                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
-                        <label> 電力 : </label>
-                        <input type="text" name="Rst1" id="rslWatt1" class="rst">
-                        <label>[W]</label>
+                    <p class="pRsltGain1">
+                        <label> 電圧利得 : </label>
+                        <input type="text" name="Gain1" id="rslGain1" class="rst">
+                        <label>[dBV]</label>
                     </p>
                 </section>
 
+
+
+                <section class="S1">
+                    <p>倍率 ⇒ 電圧利得</p>
+                    <p>　　倍率 = 10^(利得/20)</p>
+                    <p class="Item2-1">
+                        <label>電圧利得 : </label>
+                        <input type="number" name="Gain21" id="txbGain21" class="txbNum">
+                        <label>[dBV]</label>
+                    </p>
+                    <p class="pRsltGain2">
+                        <label> 　　倍率 : </label>
+                        <input type="text" name="Magnification2" id="rslMagnification2" class="rst">
+                        <label>[倍]</label>
+                    </p>
+                </section>
+
+
+
+                <section class="S1">
+                    <p>電力利得 ⇒ 倍率(dBV)</p>
+                    <p>　dBV = 10log(A)</p>
+                    <p class="Item1-1">
+                        <label>　　倍率 : </label>
+                        <input type="number" name="Magnification31" id="txbMagnification31" class="txbNum">
+                        <label>[倍]</label>
+                    </p>
+                    <p class="pRsltGain3">
+                        <label> 電圧利得 : </label>
+                        <input type="text" name="Gain3" id="rslGain3" class="rst">
+                        <label>[dBV]</label>
+                    </p>
+                </section>
+
+
+
+                <section class="S1">
+                    <p>倍率 ⇒電力利得</p>
+                    <p>倍率 = 10^(利得/10)</p>
+                    <p class="Item4-1">
+                        <label>電力利得 : </label>
+                        <input type="number" name="Gain41" id="txbGain41" class="txbNum">
+                        <label>[dBV]</label>
+                    </p>
+                    <p class="pRsltGain4">
+                        <label>　　倍率 : </label>
+                        <input type="text" name="Magnification4" id="rslMagnification4" class="rst">
+                        <label>[倍]</label>
+                    </p>
+                </section>
+            </div>
+<!-- ************************************************************************* -->
+            <div class="Line2"> 
                 <section class="S2">
                     <p class="Item2-1">
                         <label for="txbVolt21"> 電圧 : </label>

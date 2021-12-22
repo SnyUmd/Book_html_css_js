@@ -59,7 +59,12 @@ body{
     -moz-appearance:textfield;
 }
 
-
+.S{
+    float: left;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    margin: 0 5px;
+}
 .S1{
     float: left;
     padding: 10px 20px;
@@ -86,12 +91,18 @@ body{
     width: 200px;
 } */
 
+.Line2{
+    clear: left;
+    padding: 10px 1px;
+    /* margin: 10px 5px; */
+}
 
 .btnAll{
     text-align: center;
     margin: 5px;
     width: 50%;
     margin: 10px auto;
+    clear: left;
 }
 
 
