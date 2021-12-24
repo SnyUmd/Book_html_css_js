@@ -1,171 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="../sanitize.css">
-        <title></title>
-        <script src="gain_conversion.js"></script>
-        <link rel="stylesheet" href="gain_conversion.css">
-    </head>
 
-        <!-- ***************************************************************** -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="../sanitize.css">
+  <title></title>
+  <script src="gain_conversion.js"></script>
+  <link rel="stylesheet" href="gain_conversion.css">
+</head>
 
-    <body>
-        <div class="container">
-            <div class="title-txt">
-                <h2><a href="../index.html">Calculation collection</a></h2>
-            </div>
+<!-- ***************************************************************** -->
 
-            <div class="sub_title-txt">
-                <h3>利得換算</h3>
-            </div>
+<body>
+  <div class="container">
+    <div class="title-txt">
+      <h2><a href="../index.html">Calculation collection</a></h2>
+    </div>
 
-            <div class="dImg">
-                <img src="orm.Png" alt="計算イメージ">
-            </div>
+    <div class="sub_title-txt">
+      <h3>利得換算</h3>
+    </div>
 
-            <div class="Line1">
-
-
-                <section class="S1">
-                    <p>電圧利得 ⇒ 倍率(dBV)</p>
-                    <p>　dBV = 20log(A)</p>
-                    <p class="Item1-1">
-                        <label>　　倍率 : </label>
-                        <input type="number" name="Magnification11" id="txbMagnification11" class="txbNum">
-                        <label>[倍]</label>
-                    </p>
-                    <p class="pRsltGain1">
-                        <label> 電圧利得 : </label>
-                        <input type="text" name="Gain1" id="rslGain1" class="rst">
-                        <label>[dBV]</label>
-                    </p>
-                </section>
-
-
-
-                <section class="S1">
-                    <p>倍率 ⇒ 電圧利得</p>
-                    <p>　　倍率 = 10^(利得/20)</p>
-                    <p class="Item2-1">
-                        <label>電圧利得 : </label>
-                        <input type="number" name="Gain21" id="txbGain21" class="txbNum">
-                        <label>[dBV]</label>
-                    </p>
-                    <p class="pRsltGain2">
-                        <label> 　　倍率 : </label>
-                        <input type="text" name="Magnification2" id="rslMagnification2" class="rst">
-                        <label>[倍]</label>
-                    </p>
-                </section>
+    <div class="Line1">
+      <section class="S1">
+        <p>倍率 ⇒ 電圧値, 利得</p>
+        <p>　　電圧値 = 倍率 * 1V</p>
+        <p>　　電圧利得 = 20log(倍率)</p>
+        <p class="Item111">
+          <label>　　倍率 : </label>
+          <input type="number" name="Magnification111" id="txbMagnification111" class="txbNum">
+          <label>[倍]</label>
+        </p>
+        <p class="pRsltGain112">
+          <label>　電圧値 :</label>
+          <input type="text" name="Gain112" id="rslGain112" class="rst">
+          <label>[V]</label>
+        </p>
+        <p class="pRsltGain113">
+          <label>電圧利得 :</label>
+          <input type="text" name="Gain113" id="rslGain113" class="rst">
+          <label>[dBV]</label>
+        </p>
+      </section>
 
 
+      <section class="S1">
+        <p>電圧利得 ⇒ 電圧値, 倍率</p>
+        <p>　　電圧値 = 倍率 * 1V</p>
+        <p>　　倍率 = 10^(電圧利得/20)</p>
+        <p class="Item121">
+          <label>電圧利得 : </label>
+          <input type="number" name="Gain121" id="txbGain121" class="txbNum">
+          <label>[dBV]</label>
+        </p>
+        <p class="pRsltGain122">
+          <label>　電圧値 :</label>
+          <input type="text" name="Gain122" id="rslGain122" class="rst">
+          <label>[V]</label>
+        </p>
+        <p class="pRsltGain123">
+          <label> 　　倍率 :</label>
+          <input type="text" name="Magnification123" id="rslMagnification123" class="rst">
+          <label>[倍]</label>
+        </p>
+      </section>
 
-                <section class="S1">
-                    <p>電力利得 ⇒ 倍率(dBV)</p>
-                    <p>　dBV = 10log(A)</p>
-                    <p class="Item1-1">
-                        <label>　　倍率 : </label>
-                        <input type="number" name="Magnification31" id="txbMagnification31" class="txbNum">
-                        <label>[倍]</label>
-                    </p>
-                    <p class="pRsltGain3">
-                        <label> 電圧利得 : </label>
-                        <input type="text" name="Gain3" id="rslGain3" class="rst">
-                        <label>[dBV]</label>
-                    </p>
-                </section>
+
+      <!-- <section class="S1">
+        <p>出力電圧 ⇒ 電圧利得</p>
+        <p>倍率 = 10^(利得/10)</p>
+        <p class="Item131">
+          <label>電力利得 : </label>
+          <input type="number" name="Gain131" id="txbGain131" class="txbNum">
+          <label>[dBV]</label>
+        </p>
+        <p class="pRsltGain131">
+          <label>　　倍率 : </label>
+          <input type="text" name="Magnification131" id="rslMagnification131" class="rst">
+          <label>[倍]</label>
+        </p>
+      </section> -->
+
+
+    </div>
+
+
+    <!-- ************************************************************************* -->
+    <div class="Line2">
+      <section class="S2">
+        <p>倍率 ⇒ 電力値, 利得</p>
+        <p>　　電力値 = 倍率 * 1mW</p>
+        <p>　　電力利得 = 10log(倍率)</p>
+        <p class="Item211">
+          <label>　　倍率 : </label>
+          <input type="number" name="Magnification211" id="txbMagnification211" class="txbNum">
+          <label>[倍]</label>
+        </p>
+        <p class="pRsltGain212">
+          <label> 　電力値 : </label>
+          <input type="text" name="Gain212" id="rslGain212" class="rst">
+          <label>[mW]</label>
+        </p>
+        <p class="pRsltGain213">
+          <label> 電力利得 : </label>
+          <input type="text" name="Gain213" id="rslGain213" class="rst">
+          <label>[dBm]</label>
+        </p>
+      </section>
 
 
 
-                <section class="S1">
-                    <p>倍率 ⇒電力利得</p>
-                    <p>倍率 = 10^(利得/10)</p>
-                    <p class="Item4-1">
-                        <label>電力利得 : </label>
-                        <input type="number" name="Gain41" id="txbGain41" class="txbNum">
-                        <label>[dBV]</label>
-                    </p>
-                    <p class="pRsltGain4">
-                        <label>　　倍率 : </label>
-                        <input type="text" name="Magnification4" id="rslMagnification4" class="rst">
-                        <label>[倍]</label>
-                    </p>
-                </section>
-            </div>
-<!-- ************************************************************************* -->
-            <div class="Line2"> 
-                <section class="S2">
-                    <p class="Item2-1">
-                        <label for="txbVolt21"> 電圧 : </label>
-                        <input type="number" name="Volt" id="txbVolt21" class="txbNum">
-                        <label for="Res">[V]</label>
 
-                    </p>
-                    <p class="Item2-2">
-                        <label for="txbCurrent22">電流 : </label>
-                        <input type="number" name="current" id="txbCurrent22" class="txbNum">
-                        <label for="Res">[A]</label>
-                    </p>
-                    <p class="pRsltOrm">
-                        <label> 抵抗 : </label>
-                        <input type="text" name="Rst2" id="rslRes" class="rst">
-                        <label>[Ω]</label>
-                    </p>
-                    <p class="pRsltPwr">
-                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
-                        <label> 電力 : </label>
-                        <input type="text" name="Rst2" id="rslWatt2" class="rst">
-                        <label>[W]</label>
-                    </p>
-                </section>
+      <section class="S2">
+        <p>電力 ⇒ 電力地, 倍率</p>
+        <p>　　電力値 = 倍率 * 1mW</p>
+        <p>　　倍率 = 10^(電力利得/10)</p>
+        <p class="Item221">
+          <label>電力利得 : </label>
+          <input type="number" name="Gain221" id="txbGain221" class="txbNum">
+          <label>[dBm]</label>
+        </p>
+        <p class="pRsltGain222">
+          <label> 　電力値 : </label>
+          <input type="text" name="Gain222" id="rslGain222" class="rst">
+          <label>[mW]</label>
+        </p>
+        <p class="pRsltGain223">
+          <label>　　倍率 : </label>
+          <input type="text" name="Magnification223" id="rslMagnification223" class="rst">
+          <label>[倍]</label>
+        </p>
+      </section>
 
-                <section class="S3">
-                    <p class="Item3-1">
-                        <label for="txbRes31"> 抵抗 : </label>
-                        <input type="number" name="Res" id="txbRes31" class="txbNum">
-                        <label for="Res">[Ω]</label>
+    </div>
 
-                    </p>
-                    <p class="Item3-2">
-                        <label for="txbCurrent32">電流 : </label>
-                        <input type="number" name="current" id="txbCurrent32" class="txbNum">
-                        <label for="Cur">[A]</label>
-                    </p>
-                    <p class="pRsltOrm">
-                        <label> 電圧 : </label>
-                        <input type="text" name="Rst3" id="rslVolt" class="rst">
-                        <label>[V]</label>
-                    </p>
-                    <p class="pRsltPwr">
-                        <!-- <label class="rsl" id="rslCur">-----</label> [A] -->
-                        <label> 電力 : </label>
-                        <input type="text" name="Rst1" id="rslWatt3" class="rst">
-                        <label>[W]</label>
+    <div class="btnAll">
+      <button name="Btn-S3" value="計算" id="btnCal3" onclick="Calc(11, 'txbMagnification111', 'rslGain112', 'rslGain113');
+                                            Calc(12, 'txbGain121', 'rslGain122', 'rslMagnification123');
+                                            Calc(21, 'txbMagnification211', 'rslGain212', 'rslGain213');
+                                            Calc(22,'txbGain221', 'rslGain222', 'rslMagnification223');">計算
+      </button>
+    </div>
 
-                    </p>
-                </section>
-            </div>
-
-            <div class="btnAll">
-                <button name="Btn-S3"
-                        value="計算"
-                        id="btnCal3"
-                        onclick="OrmCalc(1, 'txbVolt11', 'txbRes12', 'rslCur');
-                                 OrmCalc(2, 'txbVolt21', 'txbCurrent22', 'rslRes');
-                                 OrmCalc(3, 'txbRes31', 'txbCurrent32', 'rslVolt');
-                                 WattCalc(1,'txbVolt11', 'txbRes12', 'rslWatt1');
-                                 WattCalc(2,'txbVolt21', 'txbCurrent22', 'rslWatt2');
-                                 WattCalc(3,'txbRes31', 'txbCurrent32', 'rslWatt3');">計算
-                </button>
-            </div>
-
-            <p class="pDebug">
-                <label for="" id="debug" class="debugCls" >debug</label>
-            </p>
-        </div>
-    </body>
+    <p class="pDebug">
+      <label for="" id="debug" class="debugCls">debug</label>
+    </p>
+    <p>
+      <input type="button" name="" id="btn_debug" value="Debug" onclick="debug">
+    </p>
+  </div>
+</body>
 
 
 </html>
